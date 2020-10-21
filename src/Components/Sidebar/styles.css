@@ -1,0 +1,16 @@
+.sidebar{
+	position: fixed;
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	background-color: #3b5998;
+}
+.logo-container{
+	display: flex;
+	justify-content: center;
+	padding: 15px;
+}
+.logo-main{
+	max-width: 120px;
+}
