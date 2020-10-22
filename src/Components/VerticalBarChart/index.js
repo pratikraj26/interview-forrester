@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "~/Components/Header";
 import Graph from "~/Components/Graph";
+import ExportGraphPPT from "~/Components/ExportGraphPPT";
 
 export default function VerticalBarChart() {
 	const chartData = [
@@ -25,15 +26,20 @@ export default function VerticalBarChart() {
 			y: 28,
 		},
 	]
-	const exportPPT = () => {
-		return null;
-	};
+	
 	return (
 		<>
 			<Header
 				title="Vertical Bar Chart"
 				actionTitle="Export PPT"
-				action={exportPPT}
+				action={
+					<ExportGraphPPT
+						type="bar"
+						chartData={chartData}
+						chartTitle="Fruits"
+						actionTitle="Export PPT"
+					/>
+				}
 			/>
 			<div className="content">
 				<div className="padding30 card">

@@ -9,7 +9,9 @@ export default function Sidebar() {
 	return (
 		<div className="sidebar">
 			<div className="logo-container">
-				<img src={Logo} alt="app-logo" className="logo-main" />
+				<Link to="/">
+					<img src={Logo} alt="app-logo" className="logo-main" />
+				</Link>
 			</div>
 			<div className="nav-container">
 				<Accordion

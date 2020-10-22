@@ -60,3 +60,32 @@ h1{
 .padding30{ 
 	padding: 30px;
 }
+.loader{
+	position: relative;
+	min-width: 100px;
+	min-height: 35px;
+}
+.loader::after{
+	position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    margin: -.5em 0 0 -.5em;
+    width: 1em;
+    height: 1em;
+    border-width: .2em;
+    border-radius: 500rem;
+    border-color: #fff transparent transparent;
+    border-style: solid;
+	box-shadow: 0 0 0 1px transparent;
+    -webkit-animation: spin .6s linear;
+    animation: spin .6s linear infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-box-shadow: 0 0 0 1px transparent;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

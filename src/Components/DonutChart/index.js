@@ -1,8 +1,9 @@
 import React from "react";
 import Header from "~/Components/Header";
 import Graph from "~/Components/Graph";
+import ExportGraphPPT from "~/Components/ExportGraphPPT";
 
-export default function DoughnutChart() {
+export default function DonutChart() {
 	const chartData = [
 		{
 			label: "Apple",
@@ -25,15 +26,20 @@ export default function DoughnutChart() {
 			y: 28,
 		},
 	];
-	const exportPPT = () => {
-		return null;
-	};
+
 	return (
 		<>
 			<Header
 				title="Doughnut Chart"
 				actionTitle="Export PPT"
-				action={exportPPT}
+				action={
+					<ExportGraphPPT
+						type="doughnut"
+						chartData={chartData}
+						chartTitle="Fruits"
+						actionTitle="Export PPT"
+					/>
+				}
 			/>
 			<div className="content">
 				<div className="padding30 card">
