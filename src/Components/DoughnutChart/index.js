@@ -2,7 +2,7 @@ import React from "react";
 import Header from "~/Components/Header";
 import Graph from "~/Components/Graph";
 
-export default function VerticalBarChart() {
+export default function DoughnutChart() {
 	const chartData = [
 		{
 			label: "Apple",
@@ -24,26 +24,26 @@ export default function VerticalBarChart() {
 			label: "Mango",
 			y: 28,
 		},
-	]
+	];
 	const exportPPT = () => {
 		return null;
 	};
 	return (
 		<>
 			<Header
-				title="Vertical Bar Chart"
+				title="Doughnut Chart"
 				actionTitle="Export PPT"
 				action={exportPPT}
 			/>
 			<div className="content">
 				<div className="padding30 card">
 					<Graph
-						type="bar"
+						type="doughnut"
 						chartData={chartData}
 						options={{
 							responsive: true,
 							legend: {
-								display: false,
+								position: "top",
 							},
 							title: {
 								display: true,
@@ -52,17 +52,6 @@ export default function VerticalBarChart() {
 							animation: {
 								animateScale: true,
 								animateRotate: true,
-							},
-							scales: {
-								yAxes: [
-									{
-										display: true,
-										ticks: {
-											suggestedMin: 0,
-											max: 50,
-										},
-									},
-								],
 							},
 						}}
 					/>

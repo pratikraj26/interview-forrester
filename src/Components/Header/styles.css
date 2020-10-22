@@ -3,6 +3,5 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	padding: 10px 15px;
-	box-shadow: 0 2px 4px rgba(3,27,78,.1);
+	padding: 10px 15px;;
 }

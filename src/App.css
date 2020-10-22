@@ -6,6 +6,14 @@ body{
 	font-family: 'Roboto', sans-serif;
 	font-size: 13px;
 }
+a{
+	text-decoration: none;
+}
+ul, li{
+	padding: 0;
+	margin: 0;
+	list-style: none;	
+}
 h1, h2, h3, h4, h5, h6{
 	padding: 0;
 	margin: 0;
@@ -36,8 +44,19 @@ h1{
 	padding: 6px 16px;
     min-width: 64px;
     font-weight: 500;
-    line-height: 1.75;
+	line-height: 1.75;
+	cursor: pointer;
+}
+.button-primary:hover{
+	opacity: 0.9;
+}
+.card{
+	box-shadow: 0 2px 4px rgba(3,27,78,.1);
+	background-color: #ffffff
 }
 .content{
-	
+	padding: 15px;
+}
+.padding30{ 
+	padding: 30px;
 }

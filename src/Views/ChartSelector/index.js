@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Sidebar from '~/Components/Sidebar'
 import VerticalBarChart from "~/Components/VerticalBarChart";
-import DonutChart from "~/Components/DonutChart";
+import DoughnutChart from "~/Components/DoughnutChart";
 
 import './styles.css'
 
@@ -16,7 +16,10 @@ export default function ChartSelector() {
 						path="/chart/vertical-bar-chart"
 						component={VerticalBarChart}
 					/>
-					<Route path="/chart/donut-chart" component={DonutChart} />
+					<Route
+						path="/chart/donut-chart"
+						component={DoughnutChart}
+					/>
 					<Route
 						path="/chart"
 						render={(e) => (

@@ -6,6 +6,9 @@
 	height: 100vh;
 	background-color: #3b5998;
 }
+.nav-container{
+	margin-top: 50px;
+}
 .logo-container{
 	display: flex;
 	justify-content: center;
@@ -13,4 +16,18 @@
 }
 .logo-main{
 	max-width: 120px;
+}
+.menu-item{
+	font-size: 16px;
+	font-weight: 500;
+	color: #3b5998;
+	padding: 10px;
+}
+.sub-menu-item{
+	display: block;
+	padding: 15px 20px;
+	font-size: 14px;
+	font-weight: 300;
+	color: #3b5998;
+	border-bottom: 1px solid #cecece;
 }
