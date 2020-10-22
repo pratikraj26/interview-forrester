@@ -1,31 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import Header from "~/Components/Header";
 import Graph from "~/Components/Graph";
 import ExportGraphPPT from "~/Components/ExportGraphPPT";
 
+import { fetchFruitsAnalytics } from "~/redux/actions/fruitsAnalytics";
+
 export default function DonutChart() {
-	const chartData = [
-		{
-			label: "Apple",
-			y: 10,
-		},
-		{
-			label: "Orange",
-			y: 15,
-		},
-		{
-			label: "Banana",
-			y: 25,
-		},
-		{
-			label: "Grape",
-			y: 30,
-		},
-		{
-			label: "Mango",
-			y: 28,
-		},
-	];
+	const dispatch = useDispatch();
+
+	const fruitsAnalytics = useSelector((state) => state.fruitsAnalytics);
+
+	const [chartData, setChartData] = useState(fruitsAnalytics.data);
+
+	useEffect(() => {
+		if (chartData.length === 0) {
+			dispatch(fetchFruitsAnalytics());
+		}
+	}, []);
+
+	useEffect(() => {
+		setChartData(fruitsAnalytics.data);
+	}, [fruitsAnalytics]);
+
+	if (fruitsAnalytics.fetching) {
+		return <div className="loader-container primary loader"></div>;
+	}
 
 	return (
 		<>

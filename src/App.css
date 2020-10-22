@@ -60,6 +60,9 @@ h1{
 .padding30{ 
 	padding: 30px;
 }
+.loader-container{
+	padding: 50px;
+}
 .loader{
 	position: relative;
 	min-width: 100px;
@@ -83,6 +86,9 @@ h1{
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     -webkit-box-shadow: 0 0 0 1px transparent;
+}
+.primary::after{
+	border-color: #3b5998 transparent transparent !important;
 }
 
 @keyframes spin {
